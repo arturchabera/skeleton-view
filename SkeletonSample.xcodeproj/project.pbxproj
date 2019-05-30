@@ -12,6 +12,10 @@
 		7588EFCB2299365A001F25B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7588EFC92299365A001F25B3 /* Main.storyboard */; };
 		7588EFCD2299365B001F25B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7588EFCC2299365B001F25B3 /* Assets.xcassets */; };
 		7588EFD02299365B001F25B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7588EFCE2299365B001F25B3 /* LaunchScreen.storyboard */; };
+		7588EFDA22993B50001F25B3 /* CellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7588EFD922993B50001F25B3 /* CellData.swift */; };
+		7588EFDD22993BF0001F25B3 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7588EFDB22993BF0001F25B3 /* Cell.swift */; };
+		7588EFDE22993BF0001F25B3 /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7588EFDC22993BF0001F25B3 /* Cell.xib */; };
+		7588EFE022994435001F25B3 /* SkeletonDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7588EFDF22994435001F25B3 /* SkeletonDisplayable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		7588EFCC2299365B001F25B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7588EFCF2299365B001F25B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7588EFD12299365B001F25B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7588EFD922993B50001F25B3 /* CellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellData.swift; sourceTree = "<group>"; };
+		7588EFDB22993BF0001F25B3 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		7588EFDC22993BF0001F25B3 /* Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
+		7588EFDF22994435001F25B3 /* SkeletonDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonDisplayable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +43,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		75557FD822A0357D008DC73E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7588EFDB22993BF0001F25B3 /* Cell.swift */,
+				7588EFDC22993BF0001F25B3 /* Cell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		75557FD922A0358C008DC73E /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				7588EFD922993B50001F25B3 /* CellData.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		75557FDA22A03593008DC73E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7588EFC72299365A001F25B3 /* ViewController.swift */,
+				75557FD822A0357D008DC73E /* Cells */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		75557FDB22A035AA008DC73E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7588EFDF22994435001F25B3 /* SkeletonDisplayable.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		75557FDC22A035BA008DC73E /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				7588EFC92299365A001F25B3 /* Main.storyboard */,
+				7588EFCC2299365B001F25B3 /* Assets.xcassets */,
+				7588EFCE2299365B001F25B3 /* LaunchScreen.storyboard */,
+				7588EFD12299365B001F25B3 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		7588EFB92299365A001F25B3 = {
 			isa = PBXGroup;
 			children = (
@@ -55,11 +108,10 @@
 			isa = PBXGroup;
 			children = (
 				7588EFC52299365A001F25B3 /* AppDelegate.swift */,
-				7588EFC72299365A001F25B3 /* ViewController.swift */,
-				7588EFC92299365A001F25B3 /* Main.storyboard */,
-				7588EFCC2299365B001F25B3 /* Assets.xcassets */,
-				7588EFCE2299365B001F25B3 /* LaunchScreen.storyboard */,
-				7588EFD12299365B001F25B3 /* Info.plist */,
+				75557FDA22A03593008DC73E /* ViewController */,
+				75557FD922A0358C008DC73E /* Entity */,
+				75557FDB22A035AA008DC73E /* Common */,
+				75557FDC22A035BA008DC73E /* SupportingFiles */,
 			);
 			path = SkeletonSample;
 			sourceTree = "<group>";
@@ -123,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7588EFD02299365B001F25B3 /* LaunchScreen.storyboard in Resources */,
+				7588EFDE22993BF0001F25B3 /* Cell.xib in Resources */,
 				7588EFCD2299365B001F25B3 /* Assets.xcassets in Resources */,
 				7588EFCB2299365A001F25B3 /* Main.storyboard in Resources */,
 			);
@@ -136,7 +189,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7588EFC82299365A001F25B3 /* ViewController.swift in Sources */,
+				7588EFDD22993BF0001F25B3 /* Cell.swift in Sources */,
+				7588EFE022994435001F25B3 /* SkeletonDisplayable.swift in Sources */,
 				7588EFC62299365A001F25B3 /* AppDelegate.swift in Sources */,
+				7588EFDA22993B50001F25B3 /* CellData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +340,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QG4489PHX4;
-				INFOPLIST_FILE = SkeletonSample/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SkeletonSample/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +358,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QG4489PHX4;
-				INFOPLIST_FILE = SkeletonSample/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SkeletonSample/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
